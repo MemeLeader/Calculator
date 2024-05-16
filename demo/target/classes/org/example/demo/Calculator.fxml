@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:controller="org.example.demo.HelloController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="531.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="531.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.HelloController">
    <children>
       <AnchorPane prefHeight="106.0" prefWidth="531.0" style="-fx-background-color: WHITE;">
          <children>
@@ -17,77 +17,77 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button  layoutX="50.0" layoutY="262.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="1">
+      <Button layoutX="50.0" layoutY="262.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="1">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="140.0" layoutY="262.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="2">
+      <Button layoutX="140.0" layoutY="262.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="2">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="230.0" layoutY="262.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="3">
+      <Button layoutX="230.0" layoutY="262.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="3">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="319.0" layoutY="262.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="\%">
+      <Button layoutX="319.0" layoutY="262.0" mnemonicParsing="false" onAction="#onTypeSymbol" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text=" /">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="410.0" layoutY="262.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="*">
+      <Button layoutX="410.0" layoutY="262.0" mnemonicParsing="false" onAction="#onTypeSymbol" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="*">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="50.0" layoutY="363.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="4">
+      <Button layoutX="50.0" layoutY="363.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="4">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button layoutX="140.0" layoutY="363.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="5">
+      <Button layoutX="140.0" layoutY="363.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="5">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button layoutX="230.0" layoutY="363.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="6">
+      <Button layoutX="230.0" layoutY="363.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="6">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="319.0" layoutY="363.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="-">
+      <Button layoutX="319.0" layoutY="363.0" mnemonicParsing="false" onAction="#onTypeSymbol" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="-">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="410.0" layoutY="363.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="+">
+      <Button layoutX="410.0" layoutY="363.0" mnemonicParsing="false" onAction="#onTypeSymbol" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="+">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="50.0" layoutY="463.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="7">
+      <Button layoutX="50.0" layoutY="463.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="7">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="140.0" layoutY="463.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="8">
+      <Button layoutX="140.0" layoutY="463.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="8">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="230.0" layoutY="463.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="9">
+      <Button layoutX="230.0" layoutY="463.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="9">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="319.0" layoutY="463.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text=",">
+      <Button layoutX="319.0" layoutY="463.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text=".">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="410.0" layoutY="563.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: #008080;" text="=">
+      <Button layoutX="410.0" layoutY="563.0" mnemonicParsing="false" onAction="#onEqualClick" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: #008080;" text="=">
          <font>
             <Font size="30.0" />
          </font>
@@ -97,27 +97,17 @@
             <Font size="30.0" />
          </font>
       </TextField>
-      <Button  layoutX="50.0" layoutY="563.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: #F08080;" text="С">
+      <Button layoutX="50.0" layoutY="563.0" mnemonicParsing="false" onAction="#dropAllSymbol" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: #F08080;" text="С">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="140.0" layoutY="563.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="0">
+      <Button layoutX="140.0" layoutY="563.0" mnemonicParsing="false" onAction="#onTypeNum" prefHeight="83.0" prefWidth="252.0" style="-fx-background-color: WHITE;" text="0">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button  layoutX="230.0" layoutY="563.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="!">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Button>
-      <Button  layoutX="319.0" layoutY="563.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="?">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Button>
-      <Button  layoutX="410.0" layoutY="463.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: #CD5C5C;" text="⌫">
+      <Button layoutX="410.0" layoutY="463.0" mnemonicParsing="false" onAction="#dropLastSymbol" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: #CD5C5C;" text="⌫">
          <font>
             <Font size="25.0" />
          </font>
