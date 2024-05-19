@@ -1,107 +1,97 @@
 package org.example.demo;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import java.awt.*;
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
 
 public class HelloController {
+
     @FXML
     public TextField display;
 
-    private double num1 = 0;
+    // переменная для хранения текущего значения
+    private double currentValue = 0;
 
-    private double num2 = 0;
+    // переменная для хранения предыдущего значения
+    private double previousValue = 0;
 
-    private int numCount = 0;
-
-    private double answer = 0;
-    private String symbol = "";
+    // переменная для хранения текущего оператора
+    private char currentOperator = '+';
 
     @FXML
-    protected void onTypeNum(ActionEvent event){
-
+    protected void onTypeNum(ActionEvent event) {
         Button button = (Button) event.getSource();
 
         String num = button.getText();
 
-        String currentText = display.getText();
-        String newText = currentText + num;
-        display.setText(newText);
+        // добавляем цифру к текущему значению
+        currentValue = currentValue * 10 + Double.parseDouble(num);
 
-        if (numCount == 0) {
-            num1 = Double.parseDouble(newText);
-        } else if (numCount == 1) {
-            num2 = Double.parseDouble(newText);
-        }
-
-        // увеличиваем numCount на 1
-        numCount++;
+        // обновляем текст в поле ввода
+        display.setText(String.valueOf(currentValue));
     }
+
     @FXML
     protected void onTypeSymbol(ActionEvent event) {
         Button button = (Button) event.getSource();
 
         String symbol = button.getText();
 
-        String currentText = display.getText();
-        String newText = currentText + symbol;
-        display.setText(newText);
+        // сохраняем текущее значение в качестве предыдущего значения
+        previousValue = currentValue;
 
+        // сбрасываем текущее значение в ноль
+        currentValue = 0;
 
+        // обновляем текущий оператор
+        currentOperator = symbol.charAt(0);
 
+        // обновляем текст в поле ввода
+        display.setText("");
     }
+
     @FXML
     protected void dropLastSymbol(ActionEvent event) {
         String currentText = display.getText();
 
-
         if (currentText.length() > 0) {
-
             String newText = currentText.substring(0, currentText.length() - 1);
-
             display.setText(newText);
-
-            if (Character.isDigit(currentText.charAt(currentText.length() - 1))) {
-                numCount--;
-            }
         }
     }
+
     @FXML
     protected void dropAllSymbol(ActionEvent event) {
         display.setText("");
 
-        num1 = 0;
-        num2 = 0;
-        numCount = 0;
+        currentValue = 0.0;
+        previousValue = 0.0;
     }
 
     @FXML
     protected void onEqualClick() {
-        switch (symbol){
-            case "+":
-                answer = num1 + num2;
+        // вычисляем результат на основе предыдущего значения, текущего оператора и текущего значения
+        double result = 0.0;
+        switch (currentOperator) {
+            case '+':
+                result = previousValue + currentValue;
                 break;
-            case "-":
-                answer = num1 - num2;
-            case "/":
-                answer = num1 / num2;
+            case '-':
+                result = previousValue - currentValue;
                 break;
-            case "*":
-                answer = num1 * num2;
+            case '*':
+                result = previousValue * currentValue;
                 break;
-            default:
-                display.setText("ERROR");
+            case '÷':
+                result = previousValue / currentValue;
+                break;
         }
-        display.setText(String.valueOf(answer));
 
-        num1 = 0;
-        num2 = 0;
-        numCount = 0;
+        // обновляем текст в поле ввода
+        display.setText(String.valueOf(result));
+
+        // сохраняем результат в качестве текущего значения
+        currentValue = result;
     }
 }

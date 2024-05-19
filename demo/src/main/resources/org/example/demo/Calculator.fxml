@@ -32,7 +32,7 @@
             <Font size="30.0" />
          </font>
       </Button>
-      <Button layoutX="319.0" layoutY="262.0" mnemonicParsing="false" onAction="#onTypeSymbol" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text=" /">
+      <Button layoutX="319.0" layoutY="262.0" mnemonicParsing="false" onAction="#onTypeSymbol" prefHeight="83.0" prefWidth="72.0" style="-fx-background-color: WHITE;" text="÷">
          <font>
             <Font size="30.0" />
          </font>
