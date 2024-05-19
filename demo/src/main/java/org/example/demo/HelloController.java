@@ -10,13 +10,10 @@ public class HelloController {
     @FXML
     public TextField display;
 
-    // переменная для хранения текущего значения
     private double currentValue = 0;
 
-    // переменная для хранения предыдущего значения
     private double previousValue = 0;
 
-    // переменная для хранения текущего оператора
     private char currentOperator = '+';
 
     @FXML
@@ -25,10 +22,8 @@ public class HelloController {
 
         String num = button.getText();
 
-        // добавляем цифру к текущему значению
         currentValue = currentValue * 10 + Double.parseDouble(num);
 
-        // обновляем текст в поле ввода
         display.setText(String.valueOf(currentValue));
     }
 
@@ -38,16 +33,12 @@ public class HelloController {
 
         String symbol = button.getText();
 
-        // сохраняем текущее значение в качестве предыдущего значения
         previousValue = currentValue;
 
-        // сбрасываем текущее значение в ноль
         currentValue = 0;
 
-        // обновляем текущий оператор
         currentOperator = symbol.charAt(0);
 
-        // обновляем текст в поле ввода
         display.setText("");
     }
 
@@ -71,7 +62,6 @@ public class HelloController {
 
     @FXML
     protected void onEqualClick() {
-        // вычисляем результат на основе предыдущего значения, текущего оператора и текущего значения
         double result = 0.0;
         switch (currentOperator) {
             case '+':
@@ -88,10 +78,9 @@ public class HelloController {
                 break;
         }
 
-        // обновляем текст в поле ввода
+
         display.setText(String.valueOf(result));
 
-        // сохраняем результат в качестве текущего значения
         currentValue = result;
     }
 }
